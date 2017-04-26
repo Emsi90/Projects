@@ -1,0 +1,7 @@
+@mixin gradient {
+    background: #ffffff;
+    background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #f2f2f2 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#f2f2f2 100%);
+    background: radial-gradient(ellipse at center, #ffffff 0%,#f2f2f2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=1 );
+}

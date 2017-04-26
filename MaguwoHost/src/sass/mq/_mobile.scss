@@ -1,0 +1,56 @@
+@media (max-width: 767px) {
+    
+    .top__header {
+        margin-top: 0px;
+    }
+    
+    .features{
+        height: 100%;
+        
+        .article {
+            width: 100%;
+        }
+    }
+    .clients {
+        height: 100%;
+    }
+    .ourclients {
+        flex-direction: column;
+        
+        &__company-text {
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        &__text {
+            text-align: center;
+        }
+        
+        &__company {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        &__logo {
+            width: 48%;
+            margin: 5px;
+        }
+    }
+    .testimonials {
+        flex-direction: column;
+        margin-bottom: 50px;
+        margin-top: 20px;
+        
+        &__desc {
+            position: relative;
+            width: 93%;
+            height: 180px;
+            background: #faf9f9;
+            margin: 10px;
+        }
+        
+        &__avatar {
+            bottom: -15px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@media (max-width: 1023px) {
+    
+    .header__maxw {
+        height: 80px;
+    }
+    .offer {
+        flex-direction: column;
+        height: 100%;
+    }
+    .offer__webhost, .offer__domain {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 50px;
+    }
+    .features{
+        height: 100%;
+        
+        .article {
+            width: 50%;
+        }
+    }
+    .features__rows {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    
+    .ourclients {
+        flex-direction: column;
+        
+        &__company-text {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        &__text {
+            text-align: center;
+        }
+        
+        &__company {
+            width: 95%;
+        }
+    }
+    .testimonials {
+        margin-bottom: 50px;
+    }
+    .plans__slogan {
+        margin-left: 25px;
+    }
+    .plans__button {
+        margin-right: 25px;
+    }
+
+    .footer__mark {
+        top: 54%;
+        left: 72%;
+    }
+
+
+}

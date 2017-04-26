@@ -1,0 +1,40 @@
+@media (max-width: 624px) {
+    
+    .top__domain {
+        display: none;
+    }
+    .offer__text {
+        width: 100%;
+    }
+    .ourclients__logo {
+            width: 95%;
+        }
+    .testimonials {
+        margin-top: 10px;    
+    }
+    .plans {
+        height: 100%;
+        flex-direction: column;
+    }
+    .plans__slogan {
+        text-align: center;
+        margin: 25px;
+    }
+    .plans__button {
+        margin: 25px;
+    }
+    .footer {
+        height: 100px;
+        
+        &__maxw {
+        display: none;
+        }
+        
+        &__copyrights {
+            margin-top: 0px;
+        }
+    }
+    
+
+
+}
