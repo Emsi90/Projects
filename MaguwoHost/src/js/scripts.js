@@ -1,3 +1,4 @@
+(function() {
 // Zawijane MENU
 function scrollMenu() {
     
@@ -41,7 +42,6 @@ hamburger.addEventListener('click', function() {
 
 //-----------------------------------------------------------------------------------------------
 // Back to top button
-(function() {
 var backTop = document.querySelector('.footer__back-link');
     
 function animateScroll() {

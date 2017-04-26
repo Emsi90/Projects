@@ -1,3 +1,17 @@
+.skip-link {
+    padding: 20px;
+    background: #122736;
+    color: #fff;
+    font-size: 1.6rem;
+    position: absolute;
+    left: -999em;
+}
+.skip-link:focus {
+    text-decoration: underline;
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+}
 .visuallyhidden {
     border: 0; 
     clip: rect(0 0 0 0); 
