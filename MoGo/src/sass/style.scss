@@ -1,3 +1,10 @@
 @import 'mixins';
 @import 'reset';
-
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i,400&subset=latin-ext');
+html {
+    font: 62.5%/1.5 'Montserrat', Arial, sans-serif;
+}
+body {
+    color: #000;
+    background: #FFF;
+}
