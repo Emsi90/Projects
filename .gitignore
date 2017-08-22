@@ -1,10 +1,12 @@
+.gitignore
+node_modules
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
 
 # Folder config file
 Desktop.ini
-node_modules/
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
