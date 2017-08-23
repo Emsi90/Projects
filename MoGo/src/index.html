@@ -13,7 +13,92 @@
 </head>
 <body>
     <a href="#content" class="skip-link">Go to Content</a>
-    <header></header>
+    <header id="home" class="header">
+        <div class="menu">
+            <div class="menu__logo">
+                MoGo
+            </div>
+            <nav class="menu__nav">
+                <button class="menu__hamburger">
+                    <span class="menu__ham-label">Open/Close Menu</span>
+                    <span class="menu__ham-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <div class="menu__slide-menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#about" class="menu_link">About</a></li>
+                        <li class="menu__item"><a href="#service" class="menu_link">Service</a></li>
+                        <li class="menu__item"><a href="#work" class="menu_link">Work</a></li>
+                        <li class="menu__item"><a href="#blog" class="menu_link">Blog</a></li>
+                        <li class="menu__item"><a href="#contact" class="menu_link">Contact</a></li>
+                        <li class="menu__item"><a href="busket" class="menu_link"></a></li>
+                        <li class="menu__item">
+                            <form class="menu__searchForm">
+                                <input type="search" class="menu__link">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="slider">
+            <div class="slider__slide">
+                <h1 class="slider__header">
+                    <span class="slider__kaushan">Creative Template</span><br>
+                    <span class="slider__slogan">Welcome <br>to MoGO</span>
+                </h1>
+                <hr class="slider__underline">
+                <button class="slider__Button">learn more</button>
+            </div>
+            <div class="slider__slide">
+                <h1 class="slider__header">
+                    <span class="slider__kaushan">Our Work</span><br>
+                    <span class="slider__slogan">see our work!</span>
+                </h1>
+                <hr class="slider__underline">
+                <button class="slider__Button">learn more</button>
+            </div>
+            <div class="slider__slide">
+                <h1 class="slider__header">
+                    <span class="slider__kaushan">Our Story</span><br>
+                    <span class="slider__slogan">read our story!</span>
+                </h1>
+                <hr class="slider__underline">
+                <button class="slider__Button">learn more</button>
+            </div>
+            <div class="slider__slide">
+                <h1 class="slider__header">
+                    <span class="slider__kaushan">Contact</span><br>
+                    <span class="slider__slogan">interested? contact with us!</span>
+                </h1>
+                <hr class="slider__underline">
+                <button class="slider__Button">learn more</button>
+            </div>
+
+            <div class="slider__pagination">
+                <div class="slider__timer">
+                    <progress class="slider__progressBar" max="100" value="0"></progress>
+                    <h4 class="slider__numberOfSlide"><b class="slider__numberBold">01</b>Intro</h4>
+                </div>
+                <div class="slider__timer">
+                    <progress class="slider__progressBar" max="100" value="0"></progress>
+                    <h4 class="slider__numberOfSlide"><b class="slider__numberBold">02</b>Work</h4>
+                </div>
+                <div class="slider__timer">
+                    <progress class="slider__progressBar" max="100" value="0"></progress>
+                    <h4 class="slider__numberOfSlide"><b class="slider__numberBold">03</b>About</h4>
+                </div>
+                <div class="slider__timer">
+                    <progress class="slider__progressBar" max="100" value="0"></progress>
+                    <h4 class="slider__numberOfSlide"><b class="slider__numberBold">04</b>Contacts</h4>
+                </div>
+            </div>
+        </div>
+    </header>
     <main id="content"></main>
     <!-- build:js scripts/scripts.min.js -->
     <script src="js/scripts.min.js"></script>

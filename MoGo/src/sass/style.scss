@@ -23,3 +23,33 @@ body {
         z-index: 1000;
     }
 }
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+    height: 100vh;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    &__logo {
+        color: #000;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    &__nav {
+        display: flex;
+        flex-direction: row;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+    }
+}
