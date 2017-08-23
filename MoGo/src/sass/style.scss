@@ -8,3 +8,18 @@ body {
     color: #000;
     background: #FFF;
 }
+.skip-link {
+    position: absolute;
+    left: -999rem;
+    padding: 15px 20px;
+    background: #95e1d3;
+    color: #FFF;
+    font-size: 1.6rem;
+    
+    &:focus {
+        position: absolute;
+        left: 0;
+        text-decoration: underline;
+        z-index: 1000;
+    }
+}
