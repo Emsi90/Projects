@@ -1,6 +1,8 @@
 @import 'mixins';
+@import 'default';
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i,400&subset=latin-ext');
+
 html {
     font: 62.5%/1.5 'Montserrat', Arial, sans-serif;
 }
@@ -42,7 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     
-    &__hamburger {
+    & .hamburger {
         display: none;
     }
     
@@ -99,20 +101,6 @@ body {
                 background: url('../img/shopping_cart--hover.png') top left no-repeat;
             }
         }
-        
-//        &--glass {
-//            display: block;
-//            width: 20px;
-//            height: 20px;
-//            background: url('../img/magnifying_glass.png') top left no-repeat;
-//                
-//            &:hover {
-//                padding-bottom: 0;
-//                border: none;
-//                background: url('../img/magnifying_glass--hover.png') top left no-repeat;    
-//            }
-//            
-//        }
     }
     
     &__search-form {
@@ -127,14 +115,16 @@ body {
             height: 30px;
             transition: all 0.3s;
             font-size: 1.4em;
-            padding: 5px;
+            margin-left: -10px;
+            padding: 5px 30px 5px 5px;
         }
         & input[type=search]:hover {
             background: url('../img/magnifying_glass--hover.png') 95% 50% no-repeat; 
         }
         & input[type=search]:focus {
-            background: #FFF url('../img/magnifying_glass--hover.png') 95% 50% no-repeat; 
-            width: 150px;
+            padding-right: 30px;
+            background: rgba(255, 255, 255, 0.5) url('../img/magnifying_glass--hover.png') 95% 50% no-repeat;
+            width: 200px;
         }
     }
     
@@ -142,3 +132,6 @@ body {
         width: 10px;
     }
 }
+
+@import 'mq/tablet';
+@import 'mq/hamburger';
