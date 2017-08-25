@@ -179,14 +179,14 @@ body {
     }
     
     &__kaushan {
-        font-size: 7.2rem;
+        font-size: 6rem;
         font-family: 'Kaushan Script', Times, serif;
         margin-bottom: 30px;
     }
     
     &__header {
         text-transform: uppercase;
-        font-size: 15rem;
+        font-size: 12rem;
         font-weight: 700;
     }
     
@@ -263,5 +263,6 @@ main p{
     width: 40%;
 }
 
+@import 'mq/laptop';
 @import 'mq/tablet';
 @import 'mq/hamburger';
