@@ -259,8 +259,121 @@ body {
         font-weight: 700;
     }
 }
-main p{
-    width: 40%;
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    text-align: center;
+    
+    &__about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1200px;
+        height: 100%;
+    }
+    
+    &__kaushan {
+        margin-top: 90px;
+        font-size: 2.4em;
+        font-family: 'Kaushan Script', Times, serif;
+    }
+    
+    &__header {
+        margin-top: 10px;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    &__underline {
+        margin: 40px 0;
+        width: 60px;
+        height: 3px;
+        border: none;
+        background: #f38181;
+    }
+    
+    &__para {
+        width: 95%;
+        font-family: 'Robot', arial, sans-serif;
+        font-size: 1.5rem;
+        color: #999999;
+    }
+    
+    &__gallery {
+        margin: 100px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__gallery-box {
+        position: relative;
+        margin: 10px;
+        width: 380px;
+        height: 250px;
+        background: #95e1d3;
+        
+        &:hover .content__gallery-image {
+            top: -10px;
+            left: -10px;
+        }
+        
+        &:hover .content__gallery-gradient {
+            top: -10px;
+            left: -10px;
+            width: 380px;
+            height: 250px;
+            opacity: 1;
+            background: linear-gradient(to bottom, rgba(243, 129, 129, 0.5) 0%,rgba(252, 227, 138, 0.5) 100%);
+        }
+        
+        &:hover .content__gallery-text {
+            opacity: 1;
+        }
+    }
+    
+    &__gallery-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 380px;
+        height: 250px;
+        transition: all .3s;
+    }
+    
+    &__gallery-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all .3s;
+    }
+    
+    &__gallery-text {
+        position: absolute;
+        top: calc(50% - 30px);
+        left: calc(50% - 20px);
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        font-size: 1.8em;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #FFF;
+        opacity: 0;
+        padding-top: 25px;
+        background: url('../img/user.png') top center no-repeat;
+        transition: all .3s;
+    }
+    
 }
 
 @import 'mq/laptop';
