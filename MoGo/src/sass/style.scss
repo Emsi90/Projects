@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i,400&subset=latin-ext');
 
 html {
-    font: 62.5%/1.5 'Montserrat', Arial, sans-serif;
+    font: 62.5% 'Montserrat', Arial, sans-serif;
 }
 body {
     color: #000;
@@ -299,9 +299,10 @@ body {
         background: #f38181;
     }
     
-    &__para {
+    &__description {
         width: 95%;
         font-family: 'Robot', arial, sans-serif;
+        line-height: 23px;
         font-size: 1.5rem;
         color: #999999;
     }
@@ -410,6 +411,60 @@ body {
         border-right: 1px solid #FFF;
     }
     
+    &__article-container {
+        position: relative;
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        &::before {
+            content: '';
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            border-top: 1px solid #e5e5e5;
+        }
+    }
+    
+    &__article {
+        width: 33%;
+        padding: 40px 5px 40px 60px;
+        box-sizing: border-box;
+        text-align: left;
+        
+        &--photography {
+            background: url('../img/photography.png') top 40px left no-repeat;
+        }
+        
+        &--web-design {
+            background: url('../img/web_design.png') top 40px left no-repeat;
+        }
+        
+        &--creativity {
+            background: url('../img/creativity.png') top 40px left no-repeat;
+        }
+        
+        &--seo {
+            background: url('../img/seo.png') top 40px left no-repeat;
+        }
+        
+        &--css-html {
+            background: url('../img/css-html.png') top 40px left no-repeat;
+        }
+        
+        &--digital {
+            background: url('../img/digital.png') top 40px left no-repeat;
+        }
+    }
+    
+    &__article-header {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
 }
 
 @import 'mq/laptop';
