@@ -419,6 +419,7 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        margin-bottom: 50px;
         
         &::before {
             content: '';
@@ -464,6 +465,24 @@ body {
         text-transform: uppercase;
         font-size: 1.4rem;
         margin-bottom: 10px;
+    }
+    
+    &__unique-design {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 990px;
+//        max-width: 1920px;
+        background: url('../img/bg_design.jpg') top center no-repeat;
+        background-size: cover;
+    }
+    
+    &__service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1200px;
     }
 }
 
