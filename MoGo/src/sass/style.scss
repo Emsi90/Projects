@@ -492,6 +492,7 @@ body {
         display: flex;
         flex-direction: row;
         width: 95%;
+        height: 380px;
     }
     
     &__accordion-image {
@@ -504,8 +505,34 @@ body {
         text-align: left;
     }
     
-    &__accordion-photography {
+    &__accordion-header {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 15px 0 15px 50px;
+        background: url('../img/photogrpahy_service.png') center left 5px no-repeat;
+        border: 1px solid #e5e5e5;
         
+        &:nth-child(1) {
+            background: url('../img/photogrpahy_service.png') center left 5px no-repeat;
+        }
+        
+        &:nth-child(2) {
+            background: url('../img/creativity_service.png') center left 5px no-repeat;
+        }
+        
+        &:nth-child(3) {
+            background: url('../img/web_design_service.png') center left 5px no-repeat;
+        }
+    }
+    
+    &__accordion-description {
+        padding: 15px;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #999999;
+        line-height: 24px;
     }
 }
 
