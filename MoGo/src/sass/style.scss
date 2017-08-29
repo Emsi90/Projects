@@ -358,7 +358,7 @@ body {
         top: 0;
         left: 0;
         opacity: 0;
-        transition: all .6s;
+        transition: all .3s;
     }
     
     &__gallery-text {
@@ -505,34 +505,43 @@ body {
         text-align: left;
     }
     
+    &__accordion-container:nth-child(1) {
+        background: url('../img/photogrpahy_service.png') top 7px left 5px no-repeat;
+    }
+    
+    &__accordion-container:nth-child(2) {
+        margin: 10px 0;
+        background: url('../img/creativity_service.png') top 7px left 5px no-repeat;
+    }
+    
+    &__accordion-container:nth-child(3) {
+        background: url('../img/web_design_service.png') top 7px left 5px no-repeat;
+    }
+    
     &__accordion-header {
         font-size: 1.4rem;
         text-transform: uppercase;
         padding: 15px 0 15px 50px;
-        background: url('../img/photogrpahy_service.png') center left 5px no-repeat;
         border: 1px solid #e5e5e5;
-        
-        &:nth-child(1) {
-            background: url('../img/photogrpahy_service.png') center left 5px no-repeat;
-        }
-        
-        &:nth-child(2) {
-            background: url('../img/creativity_service.png') center left 5px no-repeat;
-        }
-        
-        &:nth-child(3) {
-            background: url('../img/web_design_service.png') center left 5px no-repeat;
-        }
     }
     
     &__accordion-description {
-        padding: 15px;
+        height: 0;
         font-family: 'Roboto', Arial, sans-serif;
         font-size: 1.5rem;
         font-weight: 300;
         font-style: italic;
         color: #999999;
         line-height: 24px;
+        overflow-y: scroll;
+        transition: all 0.5s;
+        
+        &-open {
+            height: 196px;
+            padding: 15px;
+            border: 1px solid #e5e5e5;
+            border-top: none;
+        }
     }
 }
 
