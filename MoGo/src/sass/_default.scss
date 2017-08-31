@@ -20,3 +20,15 @@ a {
 .open-acc {
     display: block;
 }
+.arrow {
+    border: solid #cccccc;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+}
+.arrow-left {
+    transform: rotate(135deg);
+}
+.arrow-right {
+    transform: rotate(-45deg);
+}
