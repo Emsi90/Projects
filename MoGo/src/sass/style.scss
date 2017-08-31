@@ -527,6 +527,8 @@ body {
     
     &__accordion-description {
         height: 0;
+        border: 0px solid transparent;
+        padding: 0 15px;
         font-family: 'Roboto', Arial, sans-serif;
         font-size: 1.5rem;
         font-weight: 300;
