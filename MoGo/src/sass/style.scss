@@ -325,12 +325,12 @@ body {
         height: 250px;
         background: #95e1d3;
         
-        &:hover .content__gallery-image {
+        &:hover .content__gallery-image, &:focus .content__gallery-image {
             top: -10px;
             left: -10px;
         }
         
-        &:hover .content__gallery-gradient {
+        &:hover .content__gallery-gradient, &:focus .content__gallery-gradient {
             top: -10px;
             left: -10px;
             width: 100%;
@@ -339,7 +339,7 @@ body {
             background: linear-gradient(to bottom, rgba(243, 129, 129, 0.5) 0%,rgba(252, 227, 138, 0.5) 100%);
         }
         
-        &:hover .content__gallery-text {
+        &:hover .content__gallery-text, &:focus .content__gallery-text {
             opacity: 1;
         }
     }
@@ -724,7 +724,6 @@ body {
     
     &__media-box:nth-child(4) {
         border-right: 0;
-        border-left: 1px solid #f38181;
     }
     
     &__fb {
