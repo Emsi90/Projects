@@ -333,8 +333,8 @@ body {
         &:hover .content__gallery-gradient {
             top: -10px;
             left: -10px;
-            width: 380px;
-            height: 250px;
+            width: 100%;
+            height: 100%;
             opacity: 1;
             background: linear-gradient(to bottom, rgba(243, 129, 129, 0.5) 0%,rgba(252, 227, 138, 0.5) 100%);
         }
@@ -645,6 +645,134 @@ body {
         top: 50%;
         right: 15px;
     }
+    
+    &__our-team {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+    }
+    
+    &__gallery-box--team {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    
+    &__gallery-box--team, &__gallery-image--team {
+        width: 350px;
+        height: 470px;
+    }
+    
+    &__gallery-media {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: calc(50% - 30px);
+        left: calc(50% - 10px);
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        opacity: 0;
+        width: 220px;
+        height: 55px;
+        background: #eed889;
+        transition: all .3s;
+    }
+    
+    &__gallery-box:hover .content__gallery-media {
+        opacity: 1;
+    }
+    
+    &__media-box {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #f38181;
+        
+        &:hover {
+            background: #f38181;
+        }
+        
+        &:hover .content__fb {
+            width: 12px;
+            height: 26px;
+            background: url('../img/sprites.png') -42px -10px;
+        }
+        
+        &:hover .content__tw {
+            width: 30px;
+            height: 24px;
+            background: url('../img/sprites.png') -308px -10px;
+        }
+        
+        &:hover .content__pin {
+            width: 25px;
+            height: 26px;
+            background: url('../img/sprites.png') -119px -10px;
+        }
+        
+        &:hover .content__ins {
+            width: 27px;
+            height: 26px;
+            background: url('../img/sprites.png') -211px -10px;
+        }
+        
+    }
+    
+    &__media-box:nth-child(4) {
+        border-right: 0;
+        border-left: 1px solid #f38181;
+    }
+    
+    &__fb {
+        width: 12px;
+        height: 26px;
+        background: url('../img/sprites.png') -10px -10px;
+    }
+    
+    &__tw {
+        width: 30px; 
+        height: 24px;
+        background: url('../img/sprites.png') -258px -10px;
+    }
+    
+    &__pin {
+        width: 25px;
+        height: 26px;
+        background: url('../img/sprites.png') -74px -10px;
+    }
+    
+    &__ins {
+        width: 27px;
+        height: 26px;
+        background: url('../img/sprites.png') -164px -10px;
+    }
+    
+    &__gallery-name {
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.8rem;
+        line-height: 25px;
+        color: #333333;
+    }
+    
+    &__name {
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+    
+    &__proffession {
+        font-family: 'Roboto', arial, sans-serif;
+        font-size: 1.5rem;
+        color: #999999;
+        font-style: italic;
+    }
+    
 }
 
 @import 'mq/laptop';
