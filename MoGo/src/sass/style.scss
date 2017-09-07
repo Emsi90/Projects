@@ -820,34 +820,74 @@ body {
         max-width: 1200px;
     }
     
-    &__portfolio-list {
+    &__portfolio-container {
         margin-top: 70px;
-        margin-bottom: 100px;
-        width: 1920px;
-        height: 800px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    
-    &__portfolio-item {
-        width: 480px;
-        height: 390px;
-    }
-    
-    &__portfolio-item--high {
-        width: 480px;
-        height: 780px;
-    }
-    
-    &__portfolio-link, &__portfolio-img {
         width: 100%;
         height: 100%;
-    } 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    &__portfolio-column {
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__portfolio-link, &__portfolio-img  {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__portfolio-link:hover .content__portfolio-gradient, &__portfolio-link:focus .content__portfolio-gradient {
+        opacity: 1;
+    }
+
+    &__portfolio-link:hover .content__portfolio-text, &__portfolio-link:focus .content__portfolio-text {
+        opacity: 1;
+    }
+    
+    &__portfolio-gradient  {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(243, 129, 129, 0.5) 0%,rgba(252, 227, 138, 0.5) 100%);
+        opacity: 0;
+        transition: all .3s;
+    }
+    
+    &__portfolio-text {
+        width: 95%;
+        position: absolute;
+        top: calc(50% - 25px);
+        left: calc(50% - 1px);
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        font-size: 1.4em;
+        font-weight: 500;
+        color: #FFF;
+        opacity: 0;
+        line-height: 20px;
+        padding-top: 25px;
+        background: url('../img/user.png') top center no-repeat;
+        transition: all .3s;
+    }
+    
+    &__portfolio-upper {
+        text-transform: uppercase;
+    }
+    &__portfolio-lower {
+        font-family: 'Roboto', arial, sans-serif;
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 300;
+    }
     
 }
 @import 'mq/laptop';
 @import 'mq/tablet';
 @import 'mq/hamburger';
-@import 'masonry';
