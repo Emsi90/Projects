@@ -887,6 +887,11 @@ body {
         font-weight: 300;
     }
     
+    &__testimonial--white-bg {
+        margin: 100px 0;
+        background: #FFF;
+    }
+    
 }
 @import 'mq/laptop';
 @import 'mq/tablet';
