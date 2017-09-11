@@ -35,6 +35,7 @@ body {
 .background-menu {
     position: fixed;
     width: 100%;
+    max-width: 1920px;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -146,6 +147,7 @@ body {
     align-items: center;
     position: relative;
     width: 100%;
+    max-width: 1920px;
     height: 100vh;
     overflow: hidden;
 
@@ -379,6 +381,7 @@ body {
     
     &__counters {
         width: 100%;
+        max-width: 1920px;
         height: 200px;
         display: flex;
         justify-content: center;
@@ -474,6 +477,7 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        max-width: 1920px;
         height: 990px;
 //        max-width: 1920px;
         background: url('../img/bg_design.jpg') top center no-repeat;
@@ -552,6 +556,7 @@ body {
         justify-content: center;
         align-items: center;
         width: 100%;
+        max-width: 1920px;
         height: 300px;
         background: #f8f8f8;
     }
@@ -777,6 +782,7 @@ body {
         align-items: center;
         justify-content: center;
         width: 100%;
+        max-width: 1920px;
 //        height: 100%;
         background: #f8f8f8;
     }
@@ -1039,14 +1045,23 @@ body {
         font-weight: 200;
     }
     
-    &__blog-header {
+    &__blog-link {
         margin: 20px 0;
-        font-size: 1.4rem;
         color: #333333;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    &__blog-header {
+        font-size: 1.4rem;
         text-transform: uppercase;
     }
     
     &__blog-text {
+        padding-right: 25px;
+        line-height: 1.5;
         font-weight: 100;
         font-family: 'Roboto', arial, sans-serif;
         font-size: 1.5rem;
