@@ -1,0 +1,102 @@
+@media (max-width: 639px) {
+     
+    .slider__kaushan {
+        font-size: 3rem;
+    }
+    
+    .slider__header {
+        font-size: 7rem;
+    }
+
+    .slider__pagination {
+        transform: scale(.5);
+    }
+    
+    .slider__numberOfSlide {
+        display: none;
+    }
+    
+//    .content__gallery {
+//        width: 95%;
+//    }
+    
+//    .content__gallery-box {
+//        width: 100%;
+//    }
+//    
+//    .content__gallery-image {
+//        width: 100%;
+//        height: 100%;
+//    }
+    
+    .content__counters {
+        display: none;
+    }
+    
+    .content__article {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 40px 0;
+        text-align: center;
+        
+        &:nth-child(1) {
+            background: url('../img/photography.png') top no-repeat ;
+        }
+        
+        &--web-design {
+            background: url('../img/web_design.png') top no-repeat;
+        }
+        
+        &--creativity {
+            background: url('../img/creativity.png') top no-repeat;
+        }
+        
+        &--seo {
+            background: url('../img/seo.png') top no-repeat;
+        }
+        
+        &--css-html {
+            background: url('../img/css-html.png') top no-repeat;
+        }
+        
+        &--digital {
+            background: url('../img/digital.png') top no-repeat;
+        }
+    }
+    
+    .content__testimonial-image {
+        display: none;
+    }
+    
+    .content__testimonial-box {
+        align-items: center;
+        padding: 70px;
+    }
+    
+    .content__portfolio-container {
+        width: 95%;
+        flex-direction: column;
+    }
+    
+    .content__client {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content__client-img {
+        margin-bottom: 20px;
+    }
+    
+    .content__client-desc {
+        padding-left: 0;
+        align-items: center;
+    }
+    
+    .content__client-comment {
+        text-align: center;
+    }
+    
+}
