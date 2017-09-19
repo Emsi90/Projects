@@ -1,8 +1,18 @@
 @media (max-width: 860px) {
     
     .slider__pagination {
-        transform: scale(.8);
         flex-wrap: nowrap;
+    }
+    .slider__progressBar[value] {
+        width: 100px;
+    }
+    
+    .slider__numberOfSlide {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    .slider__numberBold {
+        font-size: 1.8rem;
     }
     
     .content__article-container {
@@ -20,7 +30,6 @@
         display: flex;
         flex-direction: column;
         width: 95%;
-        height: 100%;
     }
     
     .content__accordion-image {

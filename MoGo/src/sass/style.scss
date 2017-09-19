@@ -141,6 +141,7 @@ body {
 }
 
 .slider {
+    position: relative;
     display: flex;
     flex-direction: row;
 //    justify-content: center;
@@ -218,6 +219,8 @@ body {
     
     &__pagination {
         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 15px;
         display: flex;
         flex-direction: row;
@@ -279,7 +282,7 @@ body {
         flex-direction: column;
         align-items: center;
         max-width: 1200px;
-        height: 100%;
+
     }
     
     &__kaushan {
@@ -496,7 +499,7 @@ body {
         display: flex;
         flex-direction: row;
         width: 95%;
-        height: 380px;
+//        height: 380px;
     }
     
     &__accordion-image {
@@ -831,7 +834,6 @@ body {
     &__portfolio-container {
         margin-top: 70px;
         width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -843,6 +845,7 @@ body {
         display: flex;
         flex-direction: column;
     }
+    
     &__portfolio-link, &__portfolio-img  {
         position: relative;
         width: 100%;
@@ -913,7 +916,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
         width: 100%;
         max-width: 1920px;
         background: url('../img/clients_bg.jpg') no-repeat;
@@ -1120,7 +1122,8 @@ body {
     &__open-map {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
         display: flex;
         flex-direction: column;
         justify-content: center;

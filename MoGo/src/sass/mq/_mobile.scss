@@ -1,5 +1,5 @@
 @media (max-width: 639px) {
-     
+    
     .slider__kaushan {
         font-size: 3rem;
     }
@@ -9,7 +9,14 @@
     }
 
     .slider__pagination {
-        transform: scale(.5);
+        flex-wrap: nowrap;
+    }
+    .slider__timer {
+        margin: 10px;
+    }
+    .slider__progressBar[value] {
+        width: 55px;
+        height: 1px;
     }
     
     .slider__numberOfSlide {
