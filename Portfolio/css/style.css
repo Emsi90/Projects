@@ -509,7 +509,7 @@ form button {
     width: 150px;
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     background: none;
     border: 0;
     background: #0dccda;
