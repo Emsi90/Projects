@@ -1,5 +1,6 @@
 .gitignore
-**/node_modules
+MoGo/node_modules
+Optima/node_modules
 
 # Windows image file caches
 Thumbs.db
