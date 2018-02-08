@@ -1,2 +1,30 @@
-@import 'mixins';
 @import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'hamburger';
+@import 'media';
+
+html {
+	font-size: 62.5%;
+	font-family: 'Open Sans', Arial, san-serif;
+	line-height: 1.5;
+}
+body {
+	background: #FFF;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999rem;
+    padding: 15px 20px;
+    background: $yellow;
+    color: #FFF;
+    font-size: 1.6rem;
+    
+    &:focus {
+        position: absolute;
+        left: 0;
+        text-decoration: underline;
+        z-index: 1001;
+    }
+}
