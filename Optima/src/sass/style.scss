@@ -1,30 +1,344 @@
 @import 'reset';
+@import 'bootstrap/bootstrap-grid';
 @import 'mixins';
 @import 'variables';
-@import 'hamburger';
 @import 'media';
+@import 'default';
+@import 'hamburger';
 
 html {
-	font-size: 62.5%;
-	font-family: 'Open Sans', Arial, san-serif;
-	line-height: 1.5;
+  font-size: 62.5%;
+  font-family: 'Open Sans', Arial, san-serif;
 }
+
 body {
-	background: #FFF;
+  background: #FFF;
+  line-height: 1.5;
 }
 
 .skip-link {
+  position: absolute;
+  top: 0;
+  left: -999rem;
+  padding: 15px 20px;
+  background: #2B3075;
+  color: #FFF;
+  font-size: 1.6rem;
+
+  &:focus {
     position: absolute;
-    left: -999rem;
-    padding: 15px 20px;
-    background: $yellow;
-    color: #FFF;
-    font-size: 1.6rem;
-    
-    &:focus {
-        position: absolute;
-        left: 0;
-        text-decoration: underline;
-        z-index: 1001;
+    left: 0;
+    text-decoration: underline;
+    z-index: 1001;
+  }
+}
+
+.wrapper {
+  @include bp(lg) {
+  	position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; 
+    // overflow-y: scroll;
+		transition: all .3s;
+
+    &.menu-active {
+      right: 280px;
+      border-radius: 10px;
+      // box-shadow: 2px 0px 14px 3px rgba(0,0,0,0.75);
     }
+  }
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+  width: 100%;
+  height: 100px;
+  background: #FFF;
+  transition: all .3s;
+  z-index: 1000;
+  
+  &.menu-active {
+    right: 280px;
+  }
+}
+
+.menu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+
+  &__logo {
+    width: 100%;
+    max-width: 300px;
+    height: 80px;
+    text-indent: -99999px;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.hamburger {
+  display: none;
+
+  @include bp(lg) {
+    display: flex;
+  }
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+
+  &.menu-active {
+    right: 0px;
+  }
+
+  @include bp(lg) {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: -300px;
+    width: 100%;
+    height: 100%;
+    max-width: 280px;
+    padding: 30px 0 30px 0px;
+    flex-direction: column;
+    background: #2B2B2B;
+    // text-align: left;
+    transition: all .3s;
+  }
+
+  &__item {
+  	display: flex;
+  	height: 100%;
+  	margin: auto;
+
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include bp(lg) {
+      margin: 0;
+      height: auto;
+    }
+  }
+
+  &__link {
+  	display: flex;
+  	align-items: center;
+  	height: 100%;
+    font-size: 1.6rem;
+    color: $text-color;
+    padding: 0px 15px;
+    // border-radius: 5px;
+    transition: .2s all;
+		
+		@include bp(lg) {
+			display: block;
+			width: 100%;
+			padding: 20px 0px 20px 60px;
+			color: #FFF;
+		}
+
+    &:hover {
+      background: $deep-blue2;
+      color: #FFF;
+      // box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+.slider {
+	position: relative;
+	margin-top: 100px;
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('../img/slide1g.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__header {
+		font-size: 7rem;
+		color: #FFF;
+		font-weight: 300;
+		line-height: 1;
+		
+		& .bold {
+			font-weight: 600;
+		}
+
+		& .red-text {
+			color: $red;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		margin-top: 40px;
+		padding: 15px 30px;
+		font-size: 1.8rem;
+		background: $red;
+		border-radius: 5px;
+		transition: all .2s;
+
+		&:hover {
+			background: $red-light;
+			box-shadow: 0px 0px 25px -4px $deep-blue;
+		}
+	}
+}
+
+.section {
+
+	&__header {
+		position: relative;	
+		font-size: 4rem;
+		color: $deep-blue;
+		text-align: center;	
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+		font-weight: 400;
+		
+		& span {
+			font-weight: 300;
+			color: $red;
+		}
+
+		&:first-letter {
+			// color: $red;
+		}
+		&:after {
+			content: '';
+			position: absolute;	
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 300px;
+			height: 1px;
+			background: $deep-blue;
+			// background: linear-gradient(to right, $deep-blue 30%, #fff 30%, #fff 34%, $red 34%, $red 64%, #FFF 64%, #fff 68%, $deep-blue 68%);	
+			background: linear-gradient(to right, transparent 20%, $deep-blue2, transparent 80%);	
+		}
+	}
+
+	&__paragraph {
+		margin: 0 auto;	
+		max-width: 900px;
+		font-size: 1.6rem;
+		text-align: center;
+		color: $text-color;
+		line-height: 1.7;
+
+		@include bp(md) {
+			text-align: left;
+		}
+	}
+
+	&__bold-text {
+		color: $deep-blue2;
+		margin-top: 100px;
+		display: block;
+		font-size: 2.4rem;
+	}
+}
+
+.contact-boxes {
+	position: relative;
+	top: -50px;
+
+	&__list {
+
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		// margin: 2px;
+		padding: 30px 30px;
+		border-radius: 10px;
+		background: #4650BE;
+		background-image: linear-gradient(to right, #4650BE, #5960B9);
+		background-clip: padding-box;
+    border: 2px solid transparent;
+
+	}
+	&__icon {
+		width: 64px;
+		align-self: center;
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		border-bottom: 1px solid #FFF;
+	}
+	&__text {
+		color: #FFF;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+	&__link {
+		margin-left: 5px;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+.quote {
+	margin: 100px 0;
+	width: 100%;
+	// min-height: 300px;
+	background-attachment: fixed;
+	background-image: url('../img/quote-bg2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+
+	& p {
+		position: relative;
+		padding: 100px 0;
+		color: #FFF;
+		font-size: 4rem;
+		font-weight: 700;
+		font-style: italic;
+		text-shadow: 1px 1px 5px rgba(86, 86, 86, .6);
+
+		&::before {
+			content: '„';
+			font-family: Times;
+			font-size: 8rem;
+		}
+		&::after {
+			content: '”';
+			font-family: Times;
+			font-size: 8rem;
+		}
+	}
+}
+
+.register {
+	// height: 500px;
+	// background: red;
 }
