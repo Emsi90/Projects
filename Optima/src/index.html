@@ -117,57 +117,64 @@
       </section>
     
       <blockquote class="quote">
-        <p>Dobry stan <span class="red-text">zdrowia</span> jest lepszy niż największe bogactwo</p>
+        <div class="quote__oval-img">
+          <p>Dobry stan <span class="red-text">zdrowia</span> jest lepszy niż największe bogactwo</p>
+        </div>
       </blockquote>
     
       <section class="section register">
-        <form action="#" class="form">
-          <div class="form__row">
-            <div class="form__column">
-              <label class="form__label" for="fname">Imię:</label>
-              <input type="text" id="fname" class="form__input" name="fname" placeholder="Imię...">
+        <div class="container">
+          <h2 class="section__header">Zarejestruj się na <span>wizytę</span></h2>
+          <form action="#" class="form">
+            <div class="row">
+              <div class="col-md-5 col-10">
+                <label class="form__label" for="fname">Imię:</label>
+                <input type="text" id="fname" class="form__input" name="fname" placeholder="Imię...">
+              </div>
             </div>
-            <div class="form__column">
-              <label class="form__label" for="lname">Naziwsko:</label>
-              <input type="text" id="lname" class="form__input" name="lname" placeholder="Nazwisko...">
+            <div class="row">
+              <div class="col-md-5 col-10">
+                <label class="form__label" for="lname">Nazwisko:</label>
+                <input type="text" id="lname" class="form__input" name="lname" placeholder="Nazwisko...">
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="form__column">
-              <label class="form__label" for="phone">Nr telefonu:</label>
-              <input type="text" id="phone" class="form__input" name="phone" placeholder="Nr telefonu...">
+            <div class="row">
+              <div class="col-md-4 col-8">
+                <label class="form__label" for="phone">Nr telefonu:</label>
+                <input type="text" id="phone" class="form__input" name="phone" placeholder="Nr telefonu...">
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="form__column">
-              <label class="form__label" for="email">Adres e-mail:</label>
-              <input type="email" id="email" class="form__input" name="email" placeholder="Adres e-mail...">
+            <div class="row">
+              <div class="col-md-5 col-12">
+                <label class="form__label" for="email">Adres e-mail:</label>
+                <input type="email" id="email" class="form__input" name="email" placeholder="Adres e-mail...">
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="form__column">
-              <label class="form__label" for="doctor">Wybierz lekarza:</label>
-              <select type="email" id="doctor" class="form__input form__input--select" name="doctor">
-                <option value="1" selected disabled hidden>--Wybierz specjaliste--</option>
-                <option value="2">Wybierz specjaliste 1</option>
-                <option value="3">Wybierz specjaliste 2</option>
-                <option value="4">Wybierz specjaliste 3</option>
-              </select>
+            <div class="row">
+              <div class="col-md-4 col-8">
+                <label class="form__label" for="doctor">Wybierz lekarza:</label>
+                <select type="email" id="doctor" class="form__input form__input--select" name="doctor">
+                  <option value="1" class="select-default" selected disabled hidden>--Wybierz specjaliste--</option>
+                  <option value="2">Wybierz specjaliste 1</option>
+                  <option value="3">Wybierz specjaliste 2</option>
+                  <option value="4">Wybierz specjaliste 3</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="form__column">
-              <label class="form__label" for="date">Proponowany termin wizyty:</label>
-              <input type="date" id="date" class="form__input form__input--date" name="date">
+            <div class="row">
+              <div class="col-md-4 col-6">
+                <label class="form__label" for="date">Proponowany termin wizyty:</label>
+                <input type="date" id="date" class="form__input form__input--date col-sm-10" name="date">
+              </div>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="form__column">
-              <label class="form__label" for="message">Dodatkowe uwagi:</label>
-              <textarea type="text" id="message" class="form__input form__input--textarea" name="message"></textarea>
+            <div class="row">
+              <div class="col-md-5 col-12">
+                <label class="form__label" for="message">Dodatkowe uwagi:</label>
+                <textarea type="text" id="message" class="form__input form__input--textarea" name="message" placeholder="Treść..."></textarea>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
     
       <section class="section map">
