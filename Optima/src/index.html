@@ -82,14 +82,14 @@
       </div>
       <section id="content" class="section contact-boxes container">
           <ul class="contact-boxes__list row d-flex justify-content-center flex-md-row flex-sm-column">
-            <li class="contact-boxes__item col-md-4 d-flex flex-column justify-content-center">
+            <li class="contact-boxes__item contact-boxes__item--call col-md-4 d-flex flex-column justify-content-center">
               <img src="img/heart-icon.png" class="contact-boxes__icon" alt="">
               <p class="contact-boxes__text">
                 <span class="d-b"><span class="light">Tel:</span> <a href="tel:876108658" class="contact-boxes__link">87 610 86 58</a></span> 
                 <span class="d-b"><span class="light">E-mail:</span> <a href="mailto:optima.elk@gmail.com" class="contact-boxes__link">optima.elk@gmail.com</a></span>
               </p>
             </li>
-            <li class="contact-boxes__item col-md-4 d-flex flex-column justify-content-center">
+            <li class="contact-boxes__item contact-boxes__item--clinic col-md-4 d-flex flex-column justify-content-center">
               <img src="img/clinic-icon.png" class="contact-boxes__icon" alt="">
               <p class="contact-boxes__text">
                 <span class="d-b">ul. Armii krajowej 45</span>
@@ -97,7 +97,7 @@
                 <span class="d-b">19-300 Ełk</span>
               </p>
             </li>
-            <li class="contact-boxes__item col-md-4 d-flex flex-column justify-content-center">
+            <li class="contact-boxes__item contact-boxes__item--clock col-md-4 d-flex flex-column justify-content-center">
               <img src="img/clock-icon.png" class="contact-boxes__icon" alt="">
               <p class="contact-boxes__text">
                 <span class="d-b">Czynne codziennie od</span>
@@ -109,7 +109,7 @@
       </section>
     
       <section class="section about-us container">
-        <h2 class="section__header">O naszej <span>przychodni</span></h2>
+        <h2 class="section__header">O naszej <span class="red-text">przychodni</span></h2>
         <p class="section__paragraph">
           Przychodnia Lekarzy Specjalistów OPTIMA prowadzi działalność medyczną od 2002 roku, ciesząc się uznaniem i zaufaniem szerokiego grona pacjentów. W naszej Przychodni możecie Państwo zasięgnąć porad lekarskich zarówno podstawowej opieki zdrowotnej, jak i specjalistycznej oraz wykonać badania diagnostyczne w gabinecie zabiegowym takie jak Doppler żył i tętnic, EKG, Echo serca, USG. Oferujemy w pełni profesjonalną opiekę medyczną w atmosferze życzliwości i otwartości na problemy zgłaszających się do nas Pacjentów. Decydując się na wizytę w Przychodni Lekarzy Specjalistów OPTIMA, możecie Państwo liczyć na profesjonalną wiedzę lekarską. Znajdą Państwo u nas lekarzy o dwudziestu specjalnościach, między innymi: alergolog, dermatolog, endokrynolog, ginekolog-onkolog, hematolog, chirurg naczyniowy, internista, neurolog, onkolog, ortopeda, psychiatra dziecięcy, urolog i inni. Oferujemy kompleksową opiekę ginekologiczną, prowadzenie ciąży, diagnostyka USG. Posiadamy nowoczesny sprzęt medyczny, dzięki czemu otrzymają Państwo najbardziej wiarygodne wyniki. Jesteśmy przekonani, że tworzona przez nas atmosfera oraz umiejętności zawodowe, pozwolą czuć się Państwu swobodnie, a co najważniejsze – bezpiecznie. Gwarantujemy profesjonalne usługi i pełne zrozumienie oraz dyskrecję.
           <strong class="section__bold-text">Optima Medycyna tu znajdziesz dobrego lekarza!</strong>
@@ -124,34 +124,34 @@
     
       <section class="section register">
         <div class="container">
-          <h2 class="section__header">Zarejestruj się na <span>wizytę</span></h2>
+          <h2 class="section__header">Zarejestruj się na <span class="red-text">wizytę</span></h2>
           <form action="#" class="form">
             <div class="row">
-              <div class="col-md-5 col-10">
+              <div class="col-lg-5 col-12">
                 <label class="form__label" for="fname">Imię:</label>
                 <input type="text" id="fname" class="form__input" name="fname" placeholder="Imię...">
               </div>
             </div>
             <div class="row">
-              <div class="col-md-5 col-10">
+              <div class="col-lg-5 col-12">
                 <label class="form__label" for="lname">Nazwisko:</label>
                 <input type="text" id="lname" class="form__input" name="lname" placeholder="Nazwisko...">
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 col-8">
+              <div class="col-lg-5 col-12">
                 <label class="form__label" for="phone">Nr telefonu:</label>
                 <input type="text" id="phone" class="form__input" name="phone" placeholder="Nr telefonu...">
               </div>
             </div>
             <div class="row">
-              <div class="col-md-5 col-12">
+              <div class="col-lg-5 col-12">
                 <label class="form__label" for="email">Adres e-mail:</label>
                 <input type="email" id="email" class="form__input" name="email" placeholder="Adres e-mail...">
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 col-8">
+              <div class="col-lg-4 col-9">
                 <label class="form__label" for="doctor">Wybierz lekarza:</label>
                 <select type="email" id="doctor" class="form__input form__input--select" name="doctor">
                   <option value="1" class="select-default" selected disabled hidden>--Wybierz specjaliste--</option>
@@ -162,35 +162,156 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 col-6">
+              <div class="col-lg-4 col-6">
                 <label class="form__label" for="date">Proponowany termin wizyty:</label>
                 <input type="date" id="date" class="form__input form__input--date col-sm-10" name="date">
               </div>
             </div>
             <div class="row">
-              <div class="col-md-5 col-12">
+              <div class="col-lg-5 col-12">
                 <label class="form__label" for="message">Dodatkowe uwagi:</label>
                 <textarea type="text" id="message" class="form__input form__input--textarea" name="message" placeholder="Treść..."></textarea>
               </div>
             </div>
+            <button class="form__button" type="submit">Zarejestruj się</button>
           </form>
         </div>
       </section>
-    
+      
+      <section class="section services">
+        <div class="container">
+          <h2 class="section__header section__header--light">Usługi <span class="bold">medyczne</span></h2>
+          <div class="row">
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/alergolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Alergolog / Alergolog dziecięcy</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/badania.png" class="services__icon" alt="">
+              <h3 class="services__header">Badania</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/chirurg.png" class="services__icon" alt="">
+              <h3 class="services__header">Chirurg / Chirurg naczyniowy</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/dermatolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Dermatolog-wenerolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/diabetolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Diabetolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/endykronolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Endykronlog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/zabiegowy.png" class="services__icon" alt="">
+              <h3 class="services__header">Gabinet zabiegowy</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/ginekolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Ginekolog-onkolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/hematolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Hematolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/internista.png" class="services__icon" alt="">
+              <h3 class="services__header">Internista</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/kardiolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Kardiolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/masazysta.png" class="services__icon" alt="">
+              <h3 class="services__header">Masażysta</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/nefrolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Nefrolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/neurochirurg.png" class="services__icon" alt="">
+              <h3 class="services__header">Neurochirurg</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/neurolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Neurolog / Neurolog dziecięcy</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/onkolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Onkolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/ortopeda.png" class="services__icon" alt="">
+              <h3 class="services__header">Ortopeda</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/otolaryngolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Otolaryngolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/pediatra.png" class="services__icon" alt="">
+              <h3 class="services__header">Pediatra</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/psychiatra.png" class="services__icon" alt="">
+              <h3 class="services__header">Psychiatra dziecięcy</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/psycholog.png" class="services__icon" alt="">
+              <h3 class="services__header">Psycholog dziecięcy</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/psychoterapia.png" class="services__icon" alt="">
+              <h3 class="services__header">Psychoterapia</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/pulmolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Pulmolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/radiolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Radiolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/reumatolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Reumatolog</h3>
+            </a>
+            <a href="#" class="col-lg-2 col-md-3 col-6 services__box d-flex flex-column align-items-center">
+              <img src="img/spec/urolog.png" class="services__icon" alt="">
+              <h3 class="services__header">Urolog</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="section map">
-        <!-- iframe -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2355.0255670961114!2d22.35763321585649!3d53.82462098008212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1b97f3cdcc6d9%3A0x23bca047ac869ab!2sArmii+Krajowej+45%2C+E%C5%82k!5e0!3m2!1spl!2spl!4v1483626325931" width="100%" height="500px" allowfullscreen=""></iframe>
       </section>
     
     </main>
     
     <footer class="footer">
-      <div class="footer__row">
-        <img src="img/logo-white.png" alt="Optima" class="footer-logo">
-        <div class="footer__column">
-          <h3 class="footer__header">Odwiedź nas również na:</h3>
-          <div class="footer__row">
-            <span class="fb-icon"></span>
-            <span class="google-icon"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-12 d-flex flex-column align-items-center align-items-sm-start">
+            <img src="img/logo-white.png" alt="Optima" class="footer__logo">
+          </div>
+          <div class="col-sm-6 col-12 d-flex flex-column align-items-center align-items-sm-end">
+            <h3 class="footer__header">Odwiedź nas również na:</h3>
+            <div class="row footer__social">
+              <div class="offset-2 col-4">
+                <a href="https://www.facebook.com/PrzychodniaOptima/" class="social-icon social-icon--facebook"></a>
+              </div>
+              <div class="col-4">
+                <a href="https://plus.google.com/u/0/+PrzychodniaOptima" class="social-icon social-icon--google"></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

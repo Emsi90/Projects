@@ -44,7 +44,7 @@ body {
 		transition: all .3s;
 
     &.menu-active {
-      right: 280px;
+      right: 230px;
       border-radius: 10px;
       // box-shadow: 2px 0px 14px 3px rgba(0,0,0,0.75);
     }
@@ -63,9 +63,10 @@ body {
   background: #FFF;
   transition: all .3s;
   z-index: 1000;
+  box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);
   
   &.menu-active {
-    right: 280px;
+    right: 230px;
   }
 }
 
@@ -90,6 +91,10 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+
+    @include bp(sm) {
+    	width: 180px;
+  	}
   }
 }
 
@@ -118,7 +123,7 @@ body {
     right: -300px;
     width: 100%;
     height: 100%;
-    max-width: 280px;
+    max-width: 230px;
     padding: 30px 0 30px 0px;
     flex-direction: column;
     background: #2B2B2B;
@@ -180,11 +185,18 @@ body {
 	background-position: center;
 	background-size: cover;
 
+	@include bp(md) {
+		align-items: center;
+		height: 60vh;
+		text-align: center;
+	}
+
 	&__header {
 		font-size: 7rem;
 		color: #FFF;
 		font-weight: 300;
 		line-height: 1;
+		text-shadow: 1px 1px 5px rgba(86, 86, 86, .6);
 		
 		& .bold {
 			font-weight: 600;
@@ -192,6 +204,17 @@ body {
 
 		& .red-text {
 			color: $red;
+			text-shadow: none;
+		}
+		
+		@include bp(md) {
+			line-height: 1.2;
+			font-size: 5.5rem;
+		}
+
+		@include bp(sm) {
+			line-height: 1.2;
+			font-size: 3.8rem;
 		}
 	}
 
@@ -222,14 +245,6 @@ body {
 		margin-bottom: 40px;
 		font-weight: 400;
 		
-		& span {
-			font-weight: 300;
-			color: $red;
-		}
-
-		&:first-letter {
-			// color: $red;
-		}
 		&:after {
 			content: '';
 			position: absolute;	
@@ -242,6 +257,29 @@ body {
 			// background: linear-gradient(to right, $deep-blue 30%, #fff 30%, #fff 34%, $red 34%, $red 64%, #FFF 64%, #fff 68%, $deep-blue 68%);	
 			background: linear-gradient(to right, transparent 20%, $deep-blue2, transparent 80%);	
 		}
+
+		&--light {
+			color: #FFF;
+			font-weight: 300;
+			
+		& .bold {
+			font-weight: 400;
+		}
+
+			&:after {
+				content: '';
+				background: linear-gradient(to right, transparent 20%, #FFF, transparent 80%);	
+			}
+		}
+
+		& span {
+			font-weight: 300;
+		}
+
+		&:first-letter {
+			// color: $red;
+		}
+
 	}
 
 	&__paragraph {
@@ -281,9 +319,22 @@ body {
 		border-radius: 10px;
 		background: #4650BE;
 		background-image: linear-gradient(to right, #4650BE, #5960B9);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 		background-clip: padding-box;
-    	border: 2px solid transparent;
-
+    border: 2px solid transparent;
+    // box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);
+		
+		&--call {
+			background-image: url('../img/call-bg.jpg');
+		}
+		&--clinic {
+			background-image: url('../img/clinic-bg.jpg');
+		}
+		&--clock {
+			background-image: url('../img/clock-bg.jpg');
+		}
 	}
 	&__icon {
 		width: 64px;
@@ -325,41 +376,68 @@ body {
 
 	& p {
 		position: relative;
-		padding: 100px 0;
+		padding: 100px;
 		color: #FFF;
 		font-size: 4rem;
 		font-weight: 700;
 		font-style: italic;
+		line-height: 1.5;
 		text-shadow: 1px 1px 5px rgba(86, 86, 86, .6);
+
+		@include bp(md) {
+			padding: 100px 10px;
+			font-size: 3rem;
+		}
 
 		&::before {
 			content: '„';
 			font-family: Times;
 			font-size: 8rem;
+
+			@include bp(xl) {
+				font-size: 5rem;
+			}
+			@include bp(md) {
+				font-size: 3rem;
+			}
 		}
 		&::after {
 			content: '”';
 			font-family: Times;
 			font-size: 8rem;
+
+			@include bp(xl) {
+				font-size: 5rem;
+			}
+			@include bp(md) {
+				font-size: 3rem;
+			}
 		}
 	}
 }
 
 .register {
-	// height: 500px;
-	// background: red;
-}
-
-
-.register {
-	padding: 100px 0;
-	background-image: url('../img/reg-bg.png');
+	padding: 70px 0;
+	background-image: url('../img/doct2.png');
 	background-repeat: no-repeat;
-	background-position: right bottom;
-	background-size: 70%;
+	background-position: right bottom -200px;
+	background-size: contain;
+
+	@include bp(xxl) {
+			background-size: 60%;
+			background-position: right bottom;
+	}
+	@include bp(lg) {
+			background: none;
+	}
 }
 
 .form {
+	// padding-bottom: 100px;
+	// background-image: url('../img/doc.jpg');
+	// background-repeat: no-repeat;
+	// background-position: right bottom;
+	// background-size: contain;
 	
 	&__label {
 		display: block;
@@ -414,9 +492,112 @@ body {
 		}
 
 		&--textarea {
-  			font-family: 'Open Sans', Arial, san-serif;
+  		font-family: 'Open Sans', Arial, san-serif;
 			height: 12rem;
 			resize: vertical;
 		}
+
+	}
+	&__button {
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		background: $red;
+		color: #FFF;
+		margin-top: 20px;
+		padding: 10px 25px;
+		font-size: 1.6rem;
+		transition: .2s all;
+
+		&:hover {
+			background: $red-light;
+			box-shadow: 0px 0px 25px -4px $deep-blue;
+		}
+	}
+}
+
+.services {
+	width: 100%;
+	padding: 70px 0;
+	// background-image: linear-gradient(to right, #4650BE, #5960B9);
+	// background-image: linear-gradient(to right, #48c6ef 0%, #6f86d6 100%);
+	background-image: url('../img/spec-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	// background: #4650BE;
+	
+	&__box {
+		padding: 30px 0;
+		transition: .2s all;
+		border-radius: 15px;
+
+		&:hover {
+			transform: scale(1.2);
+			// box-shadow: 0px 0px 40px -15px $deep-blue;
+		}
+
+		&:hover .services__header {
+			font-weight: 600;
+		}
+	}
+
+	&__icon {
+		max-width: 70px;
+		margin-bottom: 30px;
+	}
+
+	&__header {
+		min-width: 200px;
+		color: #FFF;
+		font-size: 1.6rem;
+		// text-transform: uppercase;
+		text-align: center;
+		font-weight: 300;
+	}
+}
+
+.footer {
+	padding: 50px 0 20px 0;
+	background: $dark-blue;
+
+	&__logo {
+		max-width: 200px;
+	}
+	&__header {
+		font-size: 1.6rem;
+		color: #FFF;
+		@include bp(sm) {
+			margin-top: 40px;
+		}
+	}
+	&__social {
+		margin-top: 20px;
+	}
+	&__copy {
+		margin-top: 30px;
+		font-size: 1rem;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+.social-icon {
+	display: block;
+	width: 35px;
+	height: 35px;
+	// background-color: #fff;
+	background-repeat: no-repeat;
+
+	&:hover {
+		opacity: .8;
+	}
+
+	&--facebook {
+		background-image: url('../img/fb.png');
+	}
+
+	&--google {
+		background-image: url('../img/google.png');
 	}
 }
