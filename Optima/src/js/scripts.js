@@ -10,3 +10,13 @@ hamburger.addEventListener('click', function() {
   menuBox.classList.toggle('menu-active');
 	slideMenu.classList.toggle('menu-active');
 }, false);
+
+var dropDown = document.querySelector('.dd-button');
+var dropMenu = document.querySelector('.dd-menu');
+document.addEventListener('click', function(e){
+	if(e.target.className == 'dd-button') {
+		dropMenu.classList.toggle('collapse');
+	} else {
+		dropMenu.classList.remove('collapse');
+	}
+}, false);
